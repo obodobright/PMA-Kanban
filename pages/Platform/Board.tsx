@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./style.module.css"
 import { boardProps } from "../../helpers/types";
+import ItemCard from "./ItemCard";
 
 interface boardProp {
     data: boardProps;
@@ -14,6 +15,7 @@ const BoardContainer: React.FC<boardProp> = ({ data }) => {
                     <h4>{data.tag} ({data.total})</h4>
                 </span>
             </div>
+            <ItemCard />
         </main>
     )
 }
