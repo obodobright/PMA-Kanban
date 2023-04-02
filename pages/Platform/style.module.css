@@ -1,0 +1,34 @@
+.p-container {
+    width: 100%;
+    margin-left: 16rem;
+    padding: 1rem;
+}
+
+.board-flex {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* align-items: center; */
+}
+
+.board-wrapper {
+    padding: 1rem;
+}
+
+.board-top-flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.rounded {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 0.6rem;
+}
+
+.board-top-flex h4 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
