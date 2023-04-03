@@ -1,7 +1,11 @@
 .p-container {
+    margin-top: 4rem;
+    width: 100%;
+    min-height: 100vh;
     width: 100%;
     margin-left: 16rem;
     padding: 1rem;
+    overflow: auto !important;
 }
 
 .board-flex {
@@ -39,4 +43,37 @@
     margin: 0.5rem;
     border-radius: 3px;
     color: #97989f;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.items-card:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.items-card h5 {
+    font: size 2rem;
+    font-weight: 500;
+}
+
+.newB-container {
+    padding: 1rem 0.5rem;
+}
+
+.newB-container p {
+    margin-bottom: 1rem;
+}
+
+.newB-container .content-flex {
+    padding: 1rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c2c38;
+    margin-top: 1.7rem;
+    border-radius: 3px;
+    min-height: 10vh;
 }

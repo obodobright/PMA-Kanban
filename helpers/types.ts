@@ -1,6 +1,7 @@
 export interface boardItemProps {
   title?: string;
   description?: string;
+  id: number;
 }
 export interface boardProps {
   id: number;
