@@ -1,0 +1,67 @@
+.container {
+    /* padding: 10px; */
+}
+
+.container h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.input-wrapper {
+    width: 100%;
+    margin: 0.5rem auto;
+}
+
+.input-wrapper input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #585e6a;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 0.3rem;
+    margin: 0.4rem auto;
+}
+
+.input-wrapper select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #585e6a;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 0.3rem;
+    margin: 0.4rem auto;
+}
+
+.input-wrapper-flex {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.container .btn {
+    width: 100%;
+    border-radius: 20px;
+    padding: 0.7rem;
+    outline: none;
+    text-align: center;
+    margin: 0.7rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-create {
+    background-color: #625fc9;
+    color: #fff;
+}
+
+.btn-subtask {
+    color: #625fc9;
+    background-color: #fff;
+}

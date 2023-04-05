@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./style.module.css"
 import { boardProps } from "../../helpers/types";
 import ItemCard from "./ItemCard";
@@ -23,19 +23,19 @@ const BoardContainer: React.FC<boardProp> = ({ data }) => {
 
     const addItemToBoard = (id: any) => {
         console.log(id, `id ${id} was moved`);
-        const itemList = data.items?.filter((item) => id === item.id);
+        const itemList = data.items?.filter((item) => {
+            console.log(id, item.id, "this is it")
+            if (id === item.id) {
+                console.log(id, item, item.id);
+                return item;
+            }
+        });
+        console.log(itemList, "the item dragged")
         setBoard((prev) => ({
             ...prev,
             items: [...prev.items, itemList]
         }))
-    }
-    const dragRef = useRef(null);
-
-    const onDragStart = (e: React.DragEvent, position?: any) => {
-        dragRef.current = position;
-        e.dataTransfer.setData("item", position)
-        // console.log(e.target.value);
-        console.log(position, "position")
+        console.log(board, "the main board")
     }
 
     return (
@@ -43,13 +43,12 @@ const BoardContainer: React.FC<boardProp> = ({ data }) => {
             <div className={styles["board-wrapper"]} >
                 <span className={styles["board-top-flex"]} >
                     <div className={`${styles.rounded} `} style={{ backgroundColor: data.tagColor }} />
-                    <h4>{data.tag} ({data.total})</h4>
+                    <h4>{data.tag} ({data.items?.length})</h4>
                 </span>
             </div>
             {board.items?.map((dt, i) => (
-                <ItemCard index={i} onDragStart={onDragStart} ref={dragRef} key={i} data={dt} />
+                <ItemCard key={i} data={dt} />
             ))}
-
         </main>
 
     )

@@ -77,3 +77,77 @@
     border-radius: 3px;
     min-height: 10vh;
 }
+
+.sub-card {
+    width: 100%;
+    padding: 0.7rem 0.4rem;
+    border-radius: 0.3rem;
+    background-color: #21222d;
+    display: flex;
+    margin: 0.5rem auto;
+    align-items: flex-start;
+    /* justify-content: flex-start; */
+}
+
+.sub-card span {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.sub-card input[type="checkbox"] {
+    appearance: none;
+    /* creating a custom design */
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 0.15em;
+    margin-right: 0.3em;
+    border: 0.13em solid #625fc9;
+    outline: none;
+    cursor: pointer;
+}
+
+.sub-card input.checked::before {
+    content: "✓";
+    font-size: 1.2em;
+    color: #fff;
+    position: absolute;
+    right: 1px;
+    top: -3px;
+}
+
+.sub-card input:checked {
+    position: relative;
+    background-color: #625fc9;
+}
+
+.card-container .status-input select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #585e6a;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 0.3rem;
+    margin: 0.4rem auto;
+}
+
+.card-container h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+}
+
+.card-container p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #74767d;
+    margin-bottom: 0.7rem;
+}
+
+.sub-wrapper h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 0.7rem auto;
+}
