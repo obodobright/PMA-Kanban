@@ -21,18 +21,20 @@ const ItemCard: React.FC<itemProp> = ({ data, }) => {
         }
     };
 
-    const [{ isDragging }, drag] = useDrag(() => ({
-        type: "boardItem",
-        item: data,
-        collect: (monitor) => ({
-            isDragging: !!monitor.isDragging(),
-        })
-    }))
+    // const [{ isDragging }, drag] = useDrag(() => ({
+    //     type: "boardItem",
+    //     item: data,
+    //     collect: (monitor) => ({
+    //         isDragging: !!monitor.isDragging(),
+    //     })
+    // }))
+
+    // style={isDragging ? { border: "1px solid pink" } : { border: "0px" }}  ref={drag}
 
     return (
         <>
             <CardDetails data={data} onClose={obj.handleCloseModal} open={openModal} />
-            <div onClick={obj.handleOpen} style={isDragging ? { border: "1px solid pink" } : { border: "0px" }} className={styles["items-card"]} ref={drag}>
+            <div onClick={obj.handleOpen} className={styles["items-card"]} >
                 <h5>{data.title}</h5>
                 <p style={{ fontSize: "0.8rem" }}>{0} of {data.subtask?.length} subtask</p>
             </div>
