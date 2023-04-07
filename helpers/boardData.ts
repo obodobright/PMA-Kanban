@@ -5,7 +5,7 @@ export const boardData: boardProps[] = [
     id: 1,
     tag: "todo",
     tagColor: "#518c9d",
-    total: 3,
+
     items: [
       {
         id: 1,
@@ -61,7 +61,7 @@ export const boardData: boardProps[] = [
     id: 2,
     tag: "doing",
     tagColor: "#3e396b",
-    total: 7,
+
     items: [
       {
         id: 1,
@@ -105,7 +105,7 @@ export const boardData: boardProps[] = [
     id: 3,
     tag: "done",
     tagColor: "#74c8ad",
-    total: 3,
+
     items: [
       {
         id: 3,

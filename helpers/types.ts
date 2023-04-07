@@ -7,17 +7,21 @@ export interface boardItemProps {
 
 export interface subtaskProp {
   description: string;
-  id: number;
+  id?: number;
 }
 export interface boardProps {
   id: number;
   tag: string;
   tagColor: string;
-  total?: number;
   items?: boardItemProps[];
 }
 
 export interface modalProps {
   open: boolean;
   onClose: () => void;
+}
+
+export interface colorProp {
+  id?: number;
+  color?: string;
 }

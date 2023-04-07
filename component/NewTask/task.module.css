@@ -65,3 +65,24 @@
     color: #625fc9;
     background-color: #fff;
 }
+
+.color-wrapper {
+    display: flex;
+}
+
+.color-box {
+    padding: 0.3rem 1rem;
+    margin: 0.7rem;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.color-box .rounded {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
