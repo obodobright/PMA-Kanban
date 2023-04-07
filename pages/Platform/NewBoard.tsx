@@ -16,7 +16,7 @@ const NewBoard: React.FC = () => {
 
     return (
         <>
-            <  NewBoardModal open={openModal} onClose={obj.handleCloseModal} />
+            <NewBoardModal open={openModal} onClose={obj.handleCloseModal} />
             <section className={styles["newB-container"]}>
                 <p>{null}</p>
                 <div role="button" onClick={obj.handleOpenModal} className={styles["content-flex"]}>

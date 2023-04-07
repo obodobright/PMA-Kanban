@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import { produce } from "immer";
 import { useContext } from "react"
 import { BoardContext } from "@/app/context"
+import { types } from "@/app/context/contextType";
 
 
 const NewTask: React.FC<modalProps> = ({ open, onClose }) => {
@@ -48,9 +49,14 @@ const NewTask: React.FC<modalProps> = ({ open, onClose }) => {
         const prevData = [...filterPrevious, checkForStatus(status, items)]
 
         dispatch({
-            type: "ADD_NEW_BOARD",
+            type: types.addBoard,
             payload: prevData,
         })
+        setTitle("");
+        setDescrips("");
+        setTask([{ description: "" }]);
+        setStatus("")
+        onClose();
     }
 
     const removeOneTaskInput = (index: number) => {

@@ -3,15 +3,28 @@
     padding: 1.3rem 0.8rem;
     background-color: #2c2c38;
     overflow: hidden;
-    margin-left: 15rem;
+    /* margin-left: 15rem; */
     position: relative;
     top: 0;
+    transition: all 350ms;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        margin-left: 0rem !important;
+    }
 }
 
 .nav-items {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.nav-items .top-nav-items {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
 }
 
 .nav-items .btn {

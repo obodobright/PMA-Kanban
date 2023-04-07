@@ -5,6 +5,7 @@ import React, { useContext, useState } from "react";
 import { colors } from "../../helpers/color";
 import { colorProp, boardProps } from "../../helpers/types";
 import { BoardContext } from "@/app/context";
+import { types } from "@/app/context/contextType";
 
 
 const NewBoardModal: React.FC<modalProps> = ({ open, onClose }) => {
@@ -28,7 +29,7 @@ const NewBoardModal: React.FC<modalProps> = ({ open, onClose }) => {
 
         const allData = [...board, items];
         dispatch({
-            type: "ADD_COLUMN",
+            type: types.addColumn,
             payload: allData
         })
         setTitle("");

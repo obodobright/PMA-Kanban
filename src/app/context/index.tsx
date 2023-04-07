@@ -2,21 +2,21 @@
 
 import { createContext, useReducer } from "react"
 import { boardData } from "../../../helpers/boardData";
-
+import { types } from "./contextType";
 export const BoardContext = createContext({
     board: boardData,
-
+    nav: true
 });
 
 
 const reducerFunction = (state: any, action: any) => {
     switch (action.type) {
-        case "ADD_NEW_BOARD":
+        case types.addBoard:
             return { ...state, board: action.payload };
-        case "ADD_COLUMN":
+        case types.addColumn:
             return { ...state, board: action.payload }
-        case "DELETE_BOARD":
-            return { ...state, board: action.payload };
+        case types.toggleNav:
+            return { ...state, nav: !state.nav };
         default:
             return { ...state }
     }
@@ -27,7 +27,7 @@ interface provProps {
 }
 
 const BoardProvider: React.FC<provProps> = ({ children }) => {
-    const [state, dispatch] = useReducer(reducerFunction, { board: boardData });
+    const [state, dispatch] = useReducer(reducerFunction, { board: boardData, nav: true });
     return <BoardContext.Provider value={{ ...state, dispatch }}>{children}</BoardContext.Provider>
 }
 export default BoardProvider;
