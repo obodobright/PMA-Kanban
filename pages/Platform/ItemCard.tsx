@@ -34,7 +34,7 @@ const ItemCard: React.FC<itemProp> = ({ data, }) => {
             <CardDetails data={data} onClose={obj.handleCloseModal} open={openModal} />
             <div onClick={obj.handleOpen} style={isDragging ? { border: "1px solid pink" } : { border: "0px" }} className={styles["items-card"]} ref={drag}>
                 <h5>{data.title}</h5>
-                <p style={{ fontSize: "0.8rem" }}>{0} of {data.subtask.length} subtask</p>
+                <p style={{ fontSize: "0.8rem" }}>{0} of {data.subtask?.length} subtask</p>
             </div>
         </>
     )

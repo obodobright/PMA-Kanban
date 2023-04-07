@@ -14,9 +14,9 @@ const CardDetails: React.FC<detailsProp> = ({ data, open, onClose }) => {
                 <h3>{data.title}</h3>
                 <p>{data?.description}</p>
                 <div className={styles["sub-wrapper"]}>
-                    <h5>Subtasks({data.subtask.length})</h5>
+                    <h5>Subtasks({data.subtask?.length})</h5>
                     {
-                        data.subtask.map((task) => (
+                        data.subtask?.map((task) => (
                             <SubtaskCard key={task.id} task={task} />
                         ))
                     }
