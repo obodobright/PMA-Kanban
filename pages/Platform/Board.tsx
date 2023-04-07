@@ -43,11 +43,11 @@ const BoardContainer: React.FC<boardProp> = ({ data }) => {
         <main>
             <div className={styles["board-wrapper"]} >
                 <span className={styles["board-top-flex"]} >
-                    <div className={`${styles.rounded} `} style={{ backgroundColor: data.tagColor }} />
-                    <h4>{data.tag} ({data.items?.length})</h4>
+                    <div className={`${styles.rounded} `} style={{ backgroundColor: data?.tagColor }} />
+                    <h4>{data?.tag} ({data?.items?.length})</h4>
                 </span>
             </div>
-            {board.items?.map((dt, i) => (
+            {board?.items?.map((dt, i) => (
                 <ItemCard key={i} data={dt} />
             ))}
         </main>

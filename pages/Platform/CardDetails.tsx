@@ -11,13 +11,13 @@ const CardDetails: React.FC<detailsProp> = ({ data, open, onClose }) => {
     return (
         <Modal onClose={onClose} open={open}>
             <main className={styles["card-container"]}>
-                <h3>{data.title}</h3>
+                <h3>{data?.title}</h3>
                 <p>{data?.description}</p>
                 <div className={styles["sub-wrapper"]}>
-                    <h5>Subtasks({data.subtask?.length})</h5>
+                    <h5>Subtasks({data?.subtask?.length})</h5>
                     {
-                        data.subtask?.map((task) => (
-                            <SubtaskCard key={task.id} task={task} />
+                        data?.subtask?.map((task) => (
+                            <SubtaskCard key={task?.id} task={task} />
                         ))
                     }
 

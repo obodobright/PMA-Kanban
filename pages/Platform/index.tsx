@@ -17,8 +17,8 @@ const PlatformLaunch: React.FC = () => {
             {/* <DndProvider backend={HTML5Backend}> */}
             <main className={styles["p-container"]} style={{ marginLeft: nav ? "16rem" : "0rem" }} >
                 <section className={styles["board-flex"]}>
-                    {board.map((board) => (
-                        <BoardContainer key={board.id} data={board} />
+                    {board?.map((board) => (
+                        <BoardContainer key={board?.id} data={board} />
                     ))}
 
                     <NewBoard />

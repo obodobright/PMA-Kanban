@@ -50,9 +50,9 @@ const NewBoardModal: React.FC<modalProps> = ({ open, onClose }) => {
                         <label htmlFor="">Activity indicator</label>
                         <section className={styles["color-wrapper"]}>
                             {
-                                colors.map((cl, i) => (
-                                    <div role="button" onClick={() => getColor(cl)} key={i} className={styles["color-box"]} style={{ borderColor: cl.color, borderWidth: color.color === cl.color ? "3px" : "1px" }}>
-                                        <div className={styles.rounded} style={{ backgroundColor: cl.color }} ></div>
+                                colors?.map((cl, i) => (
+                                    <div role="button" onClick={() => getColor(cl)} key={i} className={styles["color-box"]} style={{ borderColor: cl?.color, borderWidth: color?.color === cl?.color ? "3px" : "1px" }}>
+                                        <div className={styles.rounded} style={{ backgroundColor: cl?.color }} ></div>
                                     </div>
                                 ))
                             }

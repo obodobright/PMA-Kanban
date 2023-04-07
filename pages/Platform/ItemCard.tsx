@@ -35,8 +35,8 @@ const ItemCard: React.FC<itemProp> = ({ data, }) => {
         <>
             <CardDetails data={data} onClose={obj.handleCloseModal} open={openModal} />
             <div onClick={obj.handleOpen} className={styles["items-card"]} >
-                <h5>{data.title}</h5>
-                <p style={{ fontSize: "0.8rem" }}>{0} of {data.subtask?.length} subtask</p>
+                <h5>{data?.title}</h5>
+                <p style={{ fontSize: "0.8rem" }}>{0} of {data?.subtask?.length} subtask</p>
             </div>
         </>
     )
