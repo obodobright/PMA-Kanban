@@ -2,7 +2,6 @@
     max-width: 300px;
     width: 250px;
     background: #2c2c38;
-    /* background-color: red; */
     height: 100%;
     position: fixed;
     top: 0;
@@ -98,6 +97,7 @@
     background-color: #665ec7;
     position: relative;
     cursor: pointer;
+    transition: all 3500ms;
 }
 
 .theme-toggle .inner-btn {
@@ -106,9 +106,8 @@
     border-radius: 50%;
     background-color: #fff;
     position: absolute;
-    transition: 0.4s;
     /* transform: translateX(26px); */
-    transition: all 350ms;
+    transition: all 3500ms;
     /* right: 0; */
 }
 

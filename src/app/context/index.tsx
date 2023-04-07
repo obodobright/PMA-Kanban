@@ -3,9 +3,24 @@
 import { createContext, useReducer } from "react"
 import { boardData } from "../../../helpers/boardData";
 import { types } from "./contextType";
-export const BoardContext = createContext({
+import { boardProps } from "../../../helpers/types";
+
+const initialState = {
     board: boardData,
-    nav: true
+    nav: true,
+    dispatch: () => { }
+}
+
+interface contextType {
+    board: boardProps[];
+    nav: boolean;
+    dispatch: React.Dispatch<any>
+}
+
+export const BoardContext = createContext<contextType>({
+    board: boardData,
+    nav: true,
+    dispatch: () => { }
 });
 
 
