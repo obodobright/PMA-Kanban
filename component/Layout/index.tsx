@@ -1,20 +1,27 @@
-import React from "react"
+import React, { useContext } from "react"
 import NavBar from "../Navbar"
 import Sidebar from "../Sidebar"
-
+import { BoardContext } from "@/app/context";
 interface Props {
     children?: React.ReactNode;
+    title: string
 }
 
-const Layout: React.FC<Props> = ({ children }) => {
+const Layout: React.FC<Props> = ({ children, title }) => {
+    const { nav } = useContext(BoardContext);
     return (
         <main>
             <section style={{ display: "flex" }}>
                 <Sidebar />
-                <NavBar />
+                <NavBar title={title} />
             </section>
-            {children}
+            <section style={{ marginLeft: nav ? "16rem" : "0rem", marginTop: "5rem", }}>
+                {children}
+
+            </section>
         </main>
     )
 }
 export default Layout
+
+

@@ -6,8 +6,12 @@ import NewTask from "../NewTask"
 import { BoardContext } from "@/app/context"
 import { TfiLayoutSidebar2 } from "react-icons/tfi"
 import { types } from "@/app/context/contextType"
+interface navProp {
+    title: string
 
-const NavBar: React.FC = () => {
+}
+
+const NavBar: React.FC<navProp> = ({ title }) => {
     const { nav, dispatch } = useContext(BoardContext);
     const [openModal, setOpenModal] = useState<boolean>(false);
 
@@ -34,7 +38,7 @@ const NavBar: React.FC = () => {
                     <section className={styles["nav-items"]}>
                         <div className={styles["top-nav-items"]}>
                             {!nav ? <TfiLayoutSidebar2 cursor={"pointer"} onClick={showSideNav} fontSize={25} color="#665EC6" /> : null}
-                            <h2>Platform Launch</h2>
+                            <h2>{title}</h2>
                         </div>
                         <div className={styles["right-bar"]}>
                             <button className={styles.btn} onClick={modalObj.handleOpenModal}>

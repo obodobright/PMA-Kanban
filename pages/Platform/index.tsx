@@ -11,11 +11,11 @@ import { useContext } from "react"
 import { BoardContext } from "@/app/context"
 
 const PlatformLaunch: React.FC = () => {
-    const { board, nav } = useContext(BoardContext);
+    const { board } = useContext(BoardContext);
     return (
-        <Layout>
+        <Layout title="Platform Launch">
             {/* <DndProvider backend={HTML5Backend}> */}
-            <main className={styles["p-container"]} style={{ marginLeft: nav ? "16rem" : "0rem" }} >
+            <main className={styles["p-container"]} >
                 <section className={styles["board-flex"]}>
                     {board?.map((board) => (
                         <BoardContainer key={board?.id} data={board} />

@@ -27,9 +27,10 @@ export const BoardContext = createContext<contextType>({
 const reducerFunction = (state: any, action: any) => {
     switch (action.type) {
         case types.addBoard:
-            return { ...state, board: action.payload };
         case types.addColumn:
-            return { ...state, board: action.payload }
+            return { ...state, board: action.payload };
+
+        // return { ...state, board: action.payload }
         case types.toggleNav:
             return { ...state, nav: !state.nav };
         default:
