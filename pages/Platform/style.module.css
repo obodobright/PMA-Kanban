@@ -161,4 +161,8 @@
     .p-container {
         margin-left: 0rem !important;
     }
+    .card-container {
+        height: 350px;
+        overflow: scroll;
+    }
 }

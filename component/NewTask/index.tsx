@@ -104,7 +104,7 @@ const NewTask: React.FC<modalProps> = ({ open, onClose }) => {
                         <span>Add new Task</span>
                     </button>
                     <section className={styles["input-wrapper"]}>
-                        <label htmlFor="title">Substask</label>
+                        <label htmlFor="title">Task Status</label>
                         <select value={status} onChange={(e) => setStatus(e.target.value)} name="status" defaultValue={"Todo"}>
                             <option value="todo">Todo</option>
                             <option value="doing">Doing</option>

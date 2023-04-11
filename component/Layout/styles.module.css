@@ -1,0 +1,18 @@
+.sidebar-container-open {
+    margin-left: 16rem;
+    margin-top: 5rem;
+}
+
+.sidebar-container-close {
+    margin-left: 0rem;
+    margin-top: 5rem;
+}
+
+@media (max-width: 1200px) {
+    .sidebar-container-open {
+        margin-left: 0rem;
+    }
+    .sidebar-container-close {
+        margin-left: 0rem;
+    }
+}
