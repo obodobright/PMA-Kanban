@@ -29,7 +29,6 @@ const reducerFunction = (state: any, action: any) => {
         case types.addBoard:
         case types.addColumn:
             return { ...state, board: action.payload };
-
         // return { ...state, board: action.payload }
         case types.toggleNav:
             return { ...state, nav: !state.nav };
